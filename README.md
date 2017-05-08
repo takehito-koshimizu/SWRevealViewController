@@ -11,14 +11,14 @@ A UIViewController subclass for revealing a rear (left and/or right) view contro
 
 ## NOTE ( Upgrading to Version 2.1)
 
-This version incorporates a new approach to Story Boards support. 
+This version incorporates a new approach to Story Boards support.
 
 * There are now two different segue classes, SWRevealViewControllerSegueSetController and SWRevealViewControllerSeguePushController. The first one is meant to set the revealViewController with the initial controllers from the story board. The second one is used to push controllers to the front with animation. The former SWRevealViewControllerSegue still works but it has been deprecated.
 * A new StoryBoard example, RevealControllerStoryBoardExample2, has been added to demonstrate the use of the new segue classes. More responsability has been moved to the Story Board design while simplifying the SWRevealViewController implementation.
 
 ## IMPORTANT NOTE: (Upgrading to Version 2.0)
 
-A number of changes have been made on version 2.0 that may break your existing project. In case you are not ready to upgrade you can continue using previous versions. The last commit before 2.0.0 was tagged v1.1.3. The important changes that affect 2.0.0 are described next. 
+A number of changes have been made on version 2.0 that may break your existing project. In case you are not ready to upgrade you can continue using previous versions. The last commit before 2.0.0 was tagged v1.1.3. The important changes that affect 2.0.0 are described next.
 
 * Dropped support for iOS6 and earlier. This version will only work on iOS7
 
@@ -71,10 +71,10 @@ The repo includes the following example projects that can be used as templates o
                    
 ![Image](https://raw.github.com/John-Lluch/SWRevealViewController/master/RevealControllerProject3_b.png)
 
-## Requirements
+## Requirements [WIP]
 
-* iOS 7.0 or later.
-* ARC memory management.
+*
+*
 
 ## Usage
 
@@ -101,7 +101,7 @@ Initializing a SWRevealViewController:
 Setting a right view controller:
 
     @property (strong, nonatomic) UIViewController *rightViewController;
-	
+
 Animated setting of the front view controller:
 
     - (void)pushFrontViewController:(UIViewController *)frontViewController animated:(BOOL)animated;
@@ -109,7 +109,7 @@ Animated setting of the front view controller:
 Animating the position of the front view controller. Position can be: `FrontViewPositionLeftSideMostRemoved`, `FrontViewPositionLeftSideMost`, `FrontViewPositionLeftSide`, `FrontViewPositionLeft`, `FrontViewPositionRight`, `FrontViewPositionRightMost` or `FrontViewPositionRightMostRemoved`
 
     - (void)setFrontViewPosition:(FrontViewPosition)frontViewPosition animated:(BOOL)animated;
-	
+
 Creating and obtaining a pan gesture recognizer:
 
     - (UIPanGestureRecognizer*)panGestureRecognizer;
@@ -117,8 +117,8 @@ Creating and obtaining a pan gesture recognizer:
 Creating and obtaining a tap gesture recognizer:
 
     - (UITapGestureRecognizer*)tapGestureRecognizer;
-	
-Other methods are documented in the SWRevealViewController.h header file. 
+
+Other methods are documented in the SWRevealViewController.h header file.
 
 ## Release Notes
 
@@ -134,16 +134,12 @@ As of November 15, 2013 Release Notes are updated on the class main header file.
 
 * I also found this one in Spanish "Sidebar o menú lateral mediante SWRevealViewController" by wikimovil.es at http://wikimovil.es/sidebar-o-menu-lateral-mediante-swrevealviewcontroller-parte-1/ which is doing a good job with detailed explanations on how to implement it using Story Boards (before V2.1)
 
-## Xamarin Binding
-
-Thanks to Jesper Vandborg for having contributed with a Xamarin Binding project for this controller that is available for download at https://github.com/Vandborg/SWRevealViewController-XamarinBinding.
-
 ## Special Mentions
 
-A Special Thank you to [Joan Martin](http://www.vilanovi.com) who formely worked at http://www.sweetwilliamsl.com and has recently been developing an app for http://www.citizen.tv. He had the original idea and implemented code for generic view deployment/undeployment and replacement of view controllers used in the class. 
+A Special Thank you to [Joan Martin](http://www.vilanovi.com) who formely worked at http://www.sweetwilliamsl.com and has recently been developing an app for http://www.citizen.tv. He had the original idea and implemented code for generic view deployment/undeployment and replacement of view controllers used in the class.
 
 Early code and api was inspired on a similar class by Philip Kluz (Philip.Kluz@zuui.org)
-	
+
 ## License
 
 Copyright (c) 2013 Joan Lluch <joan.lluch@sweetwilliamsl.com>
